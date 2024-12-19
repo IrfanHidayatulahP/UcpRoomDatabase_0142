@@ -8,6 +8,10 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Add
+import androidx.compose.material.icons.filled.ArrowBack
+import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
@@ -41,17 +45,15 @@ fun TopAppBar(
             horizontalArrangement = Arrangement.SpaceBetween
         ) {
             if (showBackButton) {
-                IconButton(
+                FloatingActionButton(
                     onClick = onBack,
-                    modifier = Modifier.size(48.dp)
+                    shape = MaterialTheme.shapes.medium,
+                    modifier = Modifier.padding(16.dp)
                 ) {
                     Icon(
-                        imageVector = ImageVector.vectorResource(id = R.drawable.arrow_back_ios_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24),
-                        contentDescription = "Back",
-                        tint = MaterialTheme.colorScheme.primary
+                        imageVector = Icons.Default.Add,
+                        contentDescription = "Tambah Mahasiswa",
                     )
-                    Spacer(modifier = Modifier.width(4.dp))
-                    Text(text = "Back")
                 }
             }
             Text(
