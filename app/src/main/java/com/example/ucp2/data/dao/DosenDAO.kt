@@ -13,7 +13,7 @@ interface DosenDAO {
     fun getAllDosen() : Flow<List<Dosen>>
 
     @Query("Select * from Dosen order by nama asc")
-    fun getDosen(nama: String): Flow<List<Dosen>>
+    fun getDosen(): Flow<List<Dosen>>
 
     @Insert
     suspend fun insertDosen(

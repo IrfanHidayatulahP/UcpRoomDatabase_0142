@@ -12,7 +12,7 @@ import com.example.ucp2.data.entity.MataKuliah
 import kotlinx.coroutines.InternalCoroutinesApi
 import kotlinx.coroutines.internal.synchronized
 
-@Database(entities = [Dosen::class], [MataKuliah::class], version = 1, exportSchema = false)
+@Database(entities = [Dosen::class, MataKuliah::class], version = 1, exportSchema = false)
 abstract class matkulDatabase : RoomDatabase() {
     // Mendefinisikan fungsi untuk mengatur data Matkul
     abstract fun MataKuliahDAO() : MataKuliahDAO

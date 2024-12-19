@@ -15,8 +15,8 @@ class LocalRepository (
         return mataKuliahDAO.getMatKul()
     }
 
-    override fun getDetailMk(kode: String): Flow<List<MataKuliah>> {
-        return mataKuliahDAO.getDetailMk(kode)
+    override fun getDetailMk(): Flow<List<MataKuliah>> {
+        return mataKuliahDAO.getDetailMk()
     }
 
     override suspend fun insertMatkul(mataKuliah: MataKuliah) {
@@ -36,8 +36,8 @@ class LocalRepository (
         return dosenDAO.getAllDosen()
     }
 
-    override fun getDosen(nama: String): Flow<List<Dosen>> {
-        return dosenDAO.getDosen(nama = nama)
+    override fun getDosen(): Flow<List<Dosen>> {
+        return dosenDAO.getDosen()
     }
 
     override suspend fun insertDosen(dosen: Dosen) {
