@@ -10,7 +10,10 @@ import kotlinx.coroutines.flow.Flow
 interface DosenDAO {
     // Get All Data
     @Query("select * from Dosen")
-    fun getALlDosen() : Flow<List<Dosen>>
+    fun getAllDosen() : Flow<List<Dosen>>
+
+    @Query("Select * from Dosen order by nama asc")
+    fun getDosen(nama: String): Flow<List<Dosen>>
 
     @Insert
     suspend fun insertDosen(
