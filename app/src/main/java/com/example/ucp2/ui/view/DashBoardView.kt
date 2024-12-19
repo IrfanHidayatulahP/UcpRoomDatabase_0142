@@ -20,7 +20,10 @@ object DestinasiHome : AlamatNavigasi {
 }
 
 @Composable
-fun DashBoardView(navController: NavController) {
+fun DashBoardView(
+    navController: NavController,
+    onClick: () -> Unit = { },
+) {
     Column(
         modifier = Modifier
             .fillMaxSize()

@@ -36,10 +36,15 @@ import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.ucp2.data.entity.Dosen
 import com.example.ucp2.ui.customwidget.TopAppBar
+import com.example.ucp2.ui.navigation.AlamatNavigasi
 import com.example.ucp2.ui.viewmodel.Dosen.HomeDsnViewModel
 import com.example.ucp2.ui.viewmodel.Dosen.HomeUiState
 import com.example.ucp2.ui.viewmodel.PenyediaViewModel
 import kotlinx.coroutines.launch
+
+object HomeDsnView : AlamatNavigasi {
+    override val route: String = "Home Dosen"
+}
 
 @Composable
 fun HomeDsnView(

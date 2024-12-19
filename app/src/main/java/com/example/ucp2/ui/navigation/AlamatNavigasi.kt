@@ -5,5 +5,9 @@ interface AlamatNavigasi {
 }
 
 object DestinasiHome : AlamatNavigasi {
-    override val route: String = "DashBoard"
+    override val route = "DashBoard"
+}
+
+object DestinasiHomeDsn : AlamatNavigasi {
+    override val route: String = "HomeDosen"
 }
