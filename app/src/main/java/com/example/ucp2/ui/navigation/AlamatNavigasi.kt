@@ -4,3 +4,6 @@ interface AlamatNavigasi {
     val route: String
 }
 
+object DestinasiHome : AlamatNavigasi {
+    override val route: String = "DashBoard"
+}
