@@ -9,6 +9,22 @@ class InsertDsnViewModel (private val repositoryKrs: RepositoryKrs) : ViewModel(
 
 }
 
+data class DsnUIState(
+    val dosenEvent: DosenEvent = DosenEvent(),
+    val isEntryValid: FormErrorState = FormErrorState(),
+    val snackBarMessage: String? = null
+)
+
+data class FormErrorState(
+    val nidn: String? = null,
+    val nama: String? = null,
+    val jenisKelamin: String? = null
+) {
+    fun isValid() : Boolean {
+        return nidn == null && nama == null && jenisKelamin == null
+    }
+}
+
 fun DosenEvent.toDosenEntity(): Dosen = Dosen(
     nidn = nidn,
     nama = nama,
