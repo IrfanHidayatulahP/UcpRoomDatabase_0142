@@ -9,7 +9,7 @@ import com.example.ucp2.data.entity.MataKuliah
 import kotlinx.coroutines.flow.Flow
 
 @Dao
-interface MataKuliahDAO {
+interface MataKuliahDAO : DosenDAO {
     // Get All MataKuliah
     @Query("Select * from MataKuliah order by kode asc")
     fun getMatKul() : Flow<List<MataKuliah>>
