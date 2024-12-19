@@ -6,7 +6,7 @@ import kotlinx.coroutines.flow.Flow
 
 interface RepositoryKrs {
     // Operasi untuk Mata Kuliah
-    fun getMatkul(kode : String) : Flow<List<MataKuliah>>
+    fun getMatkul() : Flow<List<MataKuliah>>
     fun getDetailMk(kode: String) : Flow<List<MataKuliah>>
     suspend fun insertMatkul(mataKuliah: MataKuliah)
     suspend fun deleteMatkul(mataKuliah: MataKuliah)

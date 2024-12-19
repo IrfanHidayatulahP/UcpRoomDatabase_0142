@@ -11,7 +11,7 @@ class LocalRepository (
     private val mataKuliahDAO: MataKuliahDAO
 ) : RepositoryKrs {
     // Operasi Untuk MataKuliah
-    override fun getMatkul(kode: String): Flow<List<MataKuliah>> {
+    override fun getMatkul(): Flow<List<MataKuliah>> {
         return mataKuliahDAO.getMatKul()
     }
 
