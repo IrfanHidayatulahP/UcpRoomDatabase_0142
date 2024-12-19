@@ -25,12 +25,17 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.ucp2.ui.customwidget.TopAppBar
+import com.example.ucp2.ui.navigation.AlamatNavigasi
 import com.example.ucp2.ui.viewmodel.Dosen.DosenEvent
 import com.example.ucp2.ui.viewmodel.Dosen.DsnUIState
 import com.example.ucp2.ui.viewmodel.Dosen.FormErrorState
 import com.example.ucp2.ui.viewmodel.Dosen.InsertDsnViewModel
 import com.example.ucp2.ui.viewmodel.PenyediaViewModel
 import kotlinx.coroutines.launch
+
+object DestinasiInsert : AlamatNavigasi {
+    override val route: String = "insert_dsn"
+}
 
 @Composable
 fun InsertDsnView(
