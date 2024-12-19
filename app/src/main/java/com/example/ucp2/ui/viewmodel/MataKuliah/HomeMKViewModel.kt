@@ -1,4 +1,4 @@
-package com.example.ucp2.ui.view.MataKuliah
+package com.example.ucp2.ui.viewmodel.MataKuliah
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope

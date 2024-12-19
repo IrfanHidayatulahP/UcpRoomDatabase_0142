@@ -1,4 +1,4 @@
-package com.example.ucp2.ui.view.Dosen
+package com.example.ucp2.ui.viewmodel.Dosen
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
