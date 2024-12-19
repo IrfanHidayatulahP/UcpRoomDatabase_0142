@@ -73,6 +73,10 @@ fun HomeDsnView(
     ) {
         innerPadding ->
         val HomeUiState by viewModel.homeUiState.collectAsState()
+
+        BodyHomeDsnView(
+            homeUiState = HomeUiState,
+            modifier = Modifier.padding(innerPadding)
         )
     }
 }
