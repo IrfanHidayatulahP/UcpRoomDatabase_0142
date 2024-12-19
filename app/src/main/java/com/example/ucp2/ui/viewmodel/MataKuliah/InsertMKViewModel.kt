@@ -5,6 +5,21 @@ import com.example.ucp2.data.entity.MataKuliah
 class InsertMKViewModel {
 }
 
+data class MKUIState(
+    val MatkulEvent: MKEvent = MKEvent(),
+    val isEntryValid: FormErrorState = FormErrorState(),
+    val snackBarMessagge: String? = null,
+)
+
+data class FormErrorState(
+    val kode: String? = null,
+    val nama: String? = null,
+    val sks: String? = null,
+    val semester: String? = null,
+    val jenis: String? = null,
+    val dosenPengampu: String? = null,
+)
+
 // Menyimpan input form ke dalam Entity
 fun MKEvent.toMKEntity() : MataKuliah = MataKuliah (
     kode = kode,
