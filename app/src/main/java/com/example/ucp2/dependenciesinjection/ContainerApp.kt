@@ -9,7 +9,7 @@ interface InterfaceContainerApp {
     val repositoryKrs : RepositoryKrs
 }
 
-abstract class ContainerApp (private val context: Context) : InterfaceContainerApp {
+class ContainerApp (private val context: Context) : InterfaceContainerApp {
     override val repositoryKrs: RepositoryKrs by lazy {
         LocalRepository(
             matkulDatabase.getDatabase(context).DosenDAO(),
