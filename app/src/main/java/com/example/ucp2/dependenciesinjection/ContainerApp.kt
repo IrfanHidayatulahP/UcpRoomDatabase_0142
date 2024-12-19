@@ -2,8 +2,6 @@ package com.example.ucp2.dependenciesinjection
 
 import android.content.Context
 import com.example.ucp2.data.Database.matkulDatabase
-import com.example.ucp2.data.dao.DosenDAO
-import com.example.ucp2.data.dao.MataKuliahDAO
 import com.example.ucp2.repository.LocalRepository
 import com.example.ucp2.repository.RepositoryKrs
 
