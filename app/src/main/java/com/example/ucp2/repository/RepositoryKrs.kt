@@ -13,7 +13,7 @@ interface RepositoryKrs {
     suspend fun updateMatkul(mataKuliah: MataKuliah)
 
     // Operasi untuk Dosen
-    fun getAllDosen(nidn : String) : Flow<List<Dosen>>
+    fun getAllDosen() : Flow<List<Dosen>>
     fun getDosen(nama : String) : Flow<List<Dosen>>
     suspend fun insertDosen(dosen: Dosen)
 

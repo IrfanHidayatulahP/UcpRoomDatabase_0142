@@ -32,7 +32,7 @@ class LocalRepository (
     }
 
     // Operasi untuk Dosen
-    override fun getAllDosen(nidn: String): Flow<List<Dosen>> {
+    override fun getAllDosen(): Flow<List<Dosen>> {
         return dosenDAO.getAllDosen()
     }
 
