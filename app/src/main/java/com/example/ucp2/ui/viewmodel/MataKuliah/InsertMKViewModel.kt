@@ -5,12 +5,15 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.ucp2.data.entity.Dosen
 import com.example.ucp2.data.entity.MataKuliah
 import com.example.ucp2.repository.RepositoryKrs
+import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.launch
 
 class InsertMKViewModel (private val repositoryKrs: RepositoryKrs) : ViewModel() {
     var uiState by mutableStateOf(MKUIState())
+    val dosenList: Flow<List<Dosen>> = repositoryKrs.getDosen()
 
     // Memperbarui state
     fun updateState(MatkulEvent: MKEvent) {

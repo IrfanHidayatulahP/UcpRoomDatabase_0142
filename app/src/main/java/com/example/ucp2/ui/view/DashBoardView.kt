@@ -35,8 +35,8 @@ fun DashBoardView(
             Text(text = "Go to Home Dosen")
         }
         Spacer(modifier = Modifier.height(16.dp))
-        Button(onClick = { navController.navigate("page2") }) {
-            Text(text = "Go to Page 2")
+        Button(onClick = { navController.navigate("HomeMK") }) {
+            Text(text = "Go to Home Mata Kuliah")
         }
     }
 }
