@@ -51,7 +51,7 @@ class DetailMKViewModel(
             ),
         )
 
-    fun deleteMhs() {
+    fun deleteMK() {
         detailUiState.value.detailUiEvent.toMKEntity().let {
             viewModelScope.launch {
                 repositoryKrs.deleteMatkul(it)
