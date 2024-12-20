@@ -8,7 +8,6 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
-import com.example.ucp2.ui.navigation.DestinasiDetail.KODE
 import com.example.ucp2.ui.view.DashBoardView
 import com.example.ucp2.ui.view.Dosen.DestinasiInsert
 import com.example.ucp2.ui.view.Dosen.HomeDsnView

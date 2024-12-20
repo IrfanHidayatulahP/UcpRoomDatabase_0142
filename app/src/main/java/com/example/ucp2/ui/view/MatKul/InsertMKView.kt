@@ -41,6 +41,10 @@ import com.example.ucp2.ui.viewmodel.MataKuliah.MKUIState
 import com.example.ucp2.ui.viewmodel.PenyediaViewModel
 import kotlinx.coroutines.launch
 
+object DestinasiInsertMK : AlamatNavigasi {
+    override val route: String = "insert_mk"
+}
+
 @Composable
 fun InsertMKView(
     onBack: () -> Unit,
