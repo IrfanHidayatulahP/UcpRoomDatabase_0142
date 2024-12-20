@@ -20,7 +20,7 @@ class UpdateMKViewModel (
     var updateUiState by mutableStateOf(MKUIState(MatkulEvent = MKEvent()))
         private set
 
-    private val _kode: String = checkNotNull(savedStateHandle[DestinasiUpdate.route])
+    private val _kode: String = checkNotNull(savedStateHandle[DestinasiUpdate.KODE])
 
     init {
         viewModelScope.launch {

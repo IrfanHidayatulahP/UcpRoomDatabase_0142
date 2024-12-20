@@ -18,8 +18,12 @@ object DestinasiHomeMK : AlamatNavigasi {
 
 object DestinasiDetail : AlamatNavigasi {
     override val route: String = "DetailMK"
+    const val KODE = "kode"
+    val routesWithArg = "$route/{$KODE}"
 }
 
 object DestinasiUpdate: AlamatNavigasi {
     override val route: String = "UpdateMK"
+    const val KODE = "kode"
+    val routesWithArg = "$route/{$KODE}"
 }

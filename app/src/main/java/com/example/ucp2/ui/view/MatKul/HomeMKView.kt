@@ -53,6 +53,7 @@ fun HomeMKView(
         factory = PenyediaViewModel.Factory
     ),
     onAddMK: () -> Unit = { },
+    onDetailClick: (String) -> Unit = { },
     modifier: Modifier = Modifier
 ) {
     Scaffold (
@@ -84,7 +85,7 @@ fun HomeMKView(
         BodyHomeMKView(
             homeUiState = homeUiState,
             onClick = {
-                onAddMK()
+                onDetailClick(it)
             },
             modifier = Modifier.padding(innerPadding)
         )
