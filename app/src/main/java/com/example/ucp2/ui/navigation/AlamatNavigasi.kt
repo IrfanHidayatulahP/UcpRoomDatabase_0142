@@ -16,6 +16,10 @@ object DestinasiHomeMK : AlamatNavigasi {
     override val route: String = "HomeMK"
 }
 
+object DestinasiInsertMK : AlamatNavigasi {
+    override val route: String = "insert_mk"
+}
+
 object DestinasiDetail : AlamatNavigasi {
     override val route: String = "DetailMK"
     const val KODE = "kode"

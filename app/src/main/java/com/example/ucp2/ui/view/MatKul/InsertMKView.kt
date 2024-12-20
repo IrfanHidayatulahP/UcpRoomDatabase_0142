@@ -79,7 +79,7 @@ fun InsertMKView(
             TopAppBar(
                 onBack = onBack,
                 showBackButton = true,
-                judul = "Tambah Mahasiswa",
+                judul = "Tambah Mata Kuliah",
                 modifier = modifier
             )
             InsertBodyMK (
@@ -178,7 +178,7 @@ fun FormMataKuliah(
             modifier = Modifier.fillMaxWidth(),
             value = mkEvent.sks,
             onValueChange = {
-                onValueChange(mkEvent.copy(kode = it))
+                onValueChange(mkEvent.copy(sks = it))
             },
             label = { Text("SKS") },
             isError = errorState.sks != null,
@@ -193,7 +193,7 @@ fun FormMataKuliah(
             modifier = Modifier.fillMaxWidth(),
             value = mkEvent.semester,
             onValueChange = {
-                onValueChange(mkEvent.copy(kode = it))
+                onValueChange(mkEvent.copy(semester = it))
             },
             label = { Text("Semester") },
             isError = errorState.semester != null,
@@ -206,7 +206,7 @@ fun FormMataKuliah(
             modifier = Modifier.fillMaxWidth(),
             value = mkEvent.jenis,
             onValueChange = {
-                onValueChange(mkEvent.copy(kode = it))
+                onValueChange(mkEvent.copy(jenis = it))
             },
             label = { Text("Jenis") },
             isError = errorState.jenis != null,

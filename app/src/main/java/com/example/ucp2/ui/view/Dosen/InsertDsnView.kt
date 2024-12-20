@@ -133,7 +133,7 @@ fun FormDosen(
             modifier = Modifier.fillMaxWidth(),
             value = dosenEvent.nama,
             onValueChange = {
-                onValueChange(dosenEvent.copy(it))
+                onValueChange(dosenEvent.copy(nama = it))
             },
             label = { Text("Nama") },
             isError = errorState.nama != null,
@@ -148,7 +148,7 @@ fun FormDosen(
             modifier = Modifier.fillMaxWidth(),
             value = dosenEvent.nidn,
             onValueChange = {
-                onValueChange(dosenEvent.copy(it))
+                onValueChange(dosenEvent.copy(nidn = it))
             },
             label = { Text("NIDN") },
             isError = errorState.nidn != null,

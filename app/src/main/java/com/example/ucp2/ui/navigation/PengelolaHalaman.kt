@@ -69,7 +69,7 @@ fun PengelolaHalaman(
                     )
                 },
                 onAddMK = {
-                    navController.navigate(DestinasiInsert.route)
+                    navController.navigate(DestinasiInsertMK.route)
                 },
                 modifier = modifier
             )
