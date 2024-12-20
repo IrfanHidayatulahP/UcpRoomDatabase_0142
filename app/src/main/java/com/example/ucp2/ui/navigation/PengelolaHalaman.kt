@@ -10,6 +10,7 @@ import com.example.ucp2.ui.view.DashBoardView
 import com.example.ucp2.ui.view.Dosen.DestinasiInsert
 import com.example.ucp2.ui.view.Dosen.HomeDsnView
 import com.example.ucp2.ui.view.Dosen.InsertDsnView
+import com.example.ucp2.ui.view.MatKul.DestinasiInsertMK
 import com.example.ucp2.ui.view.MatKul.HomeMKView
 
 @Composable
@@ -55,7 +56,12 @@ fun PengelolaHalaman(
         composable(
             route = DestinasiHomeMK.route
         ) {
-
+            HomeMKView(
+                onAddMK = {
+                    navController.navigate(DestinasiInsertMK.route)
+                },
+                modifier = modifier
+            )
         }
     }
 }

@@ -13,5 +13,13 @@ object DestinasiHomeDsn : AlamatNavigasi {
 }
 
 object DestinasiHomeMK : AlamatNavigasi {
-    override val route: String = "Home MK"
+    override val route: String = "HomeMK"
+}
+
+object DestinasiDetail : AlamatNavigasi {
+    override val route: String = "DetailMK"
+}
+
+object DestinasiUpdate: AlamatNavigasi {
+    override val route: String = "UpdateMK"
 }
