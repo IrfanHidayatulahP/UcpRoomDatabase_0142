@@ -1,4 +1,4 @@
-package com.example.ucp2.ui.view
+package com.example.ucp2.ui.view.Dosen
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
