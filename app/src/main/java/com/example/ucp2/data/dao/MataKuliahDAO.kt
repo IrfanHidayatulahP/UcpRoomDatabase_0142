@@ -16,7 +16,7 @@ interface MataKuliahDAO : DosenDAO {
 
     // Get Detail Matkul
     @Query("select * from MataKuliah where kode = kode")
-    fun getDetailMk(): Flow<List<MataKuliah>>
+    fun getDetailMk(): Flow<MataKuliah>
 
     @Insert
     suspend fun insertMatkul(

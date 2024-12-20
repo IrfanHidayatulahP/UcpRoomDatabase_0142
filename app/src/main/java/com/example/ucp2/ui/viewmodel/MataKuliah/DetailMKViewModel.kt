@@ -19,13 +19,13 @@ class DetailMKViewModel(
     savedStateHandle: SavedStateHandle,
     private val repositoryKrs: RepositoryKrs,
 ) : ViewModel() {
-    private val kode: String = checkNotNull(savedStateHandle[DestinasiDetail.kode])
+    private val _kode: String = checkNotNull(savedStateHandle[DestinasiDetail.NIM])
 
-    val detailUiState: StateFlow<DetailUiState> = repositoryKrs.getDetailMk(kode)
+    val detailUiState: StateFlow<DetailUiState> = repositoryKrs.getDetailMk(_kode)
         .filterNotNull()
         .map {
             DetailUiState(
-                detailUiEvent = it.toDetailUiEvent(), // Mengonversi MataKuliah ke MKEvent
+                detailUiEvent = it.toDetailUiEvent(),
                 isLoading = false,
             )
         }
@@ -50,7 +50,7 @@ class DetailMKViewModel(
             ),
         )
 
-    fun deleteMK() {
+    fun deleteMhs() {
         detailUiState.value.detailUiEvent.toMKEntity().let {
             viewModelScope.launch {
                 repositoryKrs.deleteMatkul(it)
@@ -72,7 +72,9 @@ data class DetailUiState(
         get() = detailUiEvent != MKEvent()
 }
 
-// Memindahkan data dari Entity ke UI
+// Data Class yang akan ditampilkan di UI
+
+// Memindahkan data dari entity ke UI
 fun MataKuliah.toDetailUiEvent() : MKEvent {
     return MKEvent(
         kode = kode,
@@ -80,6 +82,6 @@ fun MataKuliah.toDetailUiEvent() : MKEvent {
         sks = sks,
         semester = semester,
         jenis = jenis,
-        dosenPengampu =  dosenPengampu
+        dosenPengampu = dosenPengampu
     )
 }

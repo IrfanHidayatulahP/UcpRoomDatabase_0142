@@ -15,7 +15,7 @@ class LocalRepository (
         return mataKuliahDAO.getMatKul()
     }
 
-    override fun getDetailMk(kode: String): Flow<List<MataKuliah>> {
+    override fun getDetailMk(kode: String): Flow<MataKuliah> {
         return mataKuliahDAO.getDetailMk()
     }
 
